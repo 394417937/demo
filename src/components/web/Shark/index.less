@@ -1,0 +1,27 @@
+.shark {
+    .shark-content {
+        position: relative;
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #9747ff;
+        overflow: hidden;
+    }
+
+    .shark-content::after {
+        position: absolute;
+        content: '';
+        inset: -20%;
+        background: linear-gradient(45deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 60%);
+        animation: shark-wrap 2s infinite;
+        transform: translateX(-100%);
+    }
+
+    @keyframes shark-wrap {
+        to {
+            transform: translateX(100%);
+        }
+    }
+}
